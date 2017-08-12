@@ -27,4 +27,6 @@ Route::get('/redirect', [
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', ['as'=>'home','uses'=>'HomeController@index']);
+
+Route::post('order-post', ['as'=>'order-post','uses'=>'HomeController@orderPost']);
